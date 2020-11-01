@@ -1,6 +1,16 @@
 package com.mateus.forgetpacking.model;
 
-import lombok.Data;
+import com.mateus.forgetpacking.enums.ClotheType;
 
-public class Clothe {
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@Data
+@Builder
+@EqualsAndHashCode(callSuper=false)
+public class Clothe extends TravelItem{
+    
+    private ClotheType type;
+    private int quantity;
 }
